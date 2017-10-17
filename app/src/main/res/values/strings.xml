@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">한성 맛집 앱</string>
+    <string name="a">학생식당</string>
+    <string name="b">서울 성북구 삼선동2가 389</string>
+    <string name="c">02-760-4499</string>
+    <string name="d">오전 10시30분 ~ 오후 7시</string>
+    <string name="button_clicked_msg">Button clicked!</string>
 </resources>

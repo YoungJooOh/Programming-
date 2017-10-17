@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/quick_action1"
+        android:title="만두만두"
+        android:icon="@drawable/ic_keyboard_arrow_left_black_24dp"
+        />
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_keyboard_arrow_left_black_24dp"
+        android:title="김치만두"/>
+    <item
+        android:id="@+id/action_subactivity"
+        android:title="lets eat mandu"/>
+</menu>
