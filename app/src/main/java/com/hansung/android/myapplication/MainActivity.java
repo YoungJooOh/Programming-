@@ -4,7 +4,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
@@ -16,9 +20,41 @@ public class MainActivity extends AppCompatActivity {
     private static final int request_code = 0;
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.quick_action1:
+//
+                return true;
+            case R.id.action_settings:
+//
+                return true;
+            case R.id.action_subactivity:
+                startActivity(new Intent(this, SecondActivity.class));
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.linear_layout);
+
+        ImageButton btn = (ImageButton) findViewById(R.id.iconItem2);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent implicit_intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:027604499"));
+                startActivity(implicit_intent);
+            }
+        });
 
         ArrayList<MyItem> data = new ArrayList<MyItem>();
         data.add(new MyItem(R.drawable.sample_1, "고기만두", "1500원"));
@@ -31,6 +67,16 @@ public class MainActivity extends AppCompatActivity {
         //어댑터 연결
         ListView listView = (ListView) findViewById(R.id.listView);
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            public void onItemClick(AdapterView<?> parent, View vClicked,
+                                    int position, long id) {
+                //   String name = (String) ((TextView)vClicked.findViewById(R.id.textItem1)).getText();
+                String name = ((MyItem)adapter.getItem(position)).nName;
+                Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
