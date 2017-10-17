@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.kwanwoo.android.uibasic.MainActivity"
+    android:background="#ffffff"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:background="#aa00ff">
+
+        <TextView
+
+            android:id="@+id/button1"
+            android:layout_width="384dp"
+            android:layout_height="57dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@android:color/holo_blue_bright"
+
+            android:orientation="vertical"
+            android:text="학생식당"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@android:color/holo_green_light"
+        android:layout_weight="0.68">
+
+        <ImageView
+            android:id="@+id/iconItem"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/sample_0" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:weightSum="1">
+            <TextView
+                android:id="@+id/textItem1"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:textColor="@android:color/black"
+
+                android:text="서울 성북구 삼선동2가 389" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/textItem2"
+                    android:layout_width="94dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="0.09"
+                    android:gravity="center"
+                    android:text="02-760-4499"
+                    android:textColor="@color/colorAccent" />
+
+                <ImageButton
+                    android:id="@+id/iconItem2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/call" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/textItem3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="오전 10시30분 ~ 오후 7시" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical"
+        android:background="#aa00ff">
+
+        <TextView
+
+            android:id="@+id/button2"
+            android:layout_width="384dp"
+            android:layout_height="47dp"
+            android:layout_gravity="center"
+            android:background="@android:color/holo_orange_light"
+            android:gravity="center"
+
+            android:orientation="vertical"
+            android:text="만두 메뉴"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="291dp"
+        android:layout_weight="8.11">
+
+    </ListView>
+
+
+</LinearLayout>
+
+
+
